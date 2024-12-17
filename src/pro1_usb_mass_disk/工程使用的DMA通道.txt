@@ -1,0 +1,5 @@
+I2S2£ºDMA1_Stream4(TX)  DMA1_Stream3(RX)
+SPI3£ºDMA1_Stream7(TX)  DMA1_Stream2(RX)
+SPI1£ºDMA2_Stream3(TX)  DMA2_Stream0(RX)
+SDIO£ºDMA2_Stream6
+LCD£º DMA2_Stream1

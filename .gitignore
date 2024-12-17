@@ -1,0 +1,18 @@
+# Vidio_Player
+/build
+/dist
+/Vidio_Player.egg-info    
+*.o
+*.d
+*.crf
+*.sct
+*.hex
+*.bin
+*.elf
+*.map
+*.a
+*.axf
+*.lnp
+*.htm
+*.lnp
+*.dep
