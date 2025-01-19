@@ -26,7 +26,8 @@ void key_init(void)
 	GPIO_SetBits(KEY_DEC_PORT, KEY_DEC_PIN);
 	
 	GPIO_InitStructure.GPIO_Pin = KEY_INC_PIN;     //KEY_UP-PA0
-	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_DOWN;
+//	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_DOWN;
+	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
 	GPIO_Init(KEY_INC_PORT, &GPIO_InitStructure);
 	GPIO_ResetBits(KEY_INC_PORT, KEY_INC_PIN);
 }
@@ -93,7 +94,8 @@ int key_state_read(int key_id)
 			return (KEY_DEC_PORT->IDR & KEY_DEC_PIN)? 0 : 1;
 		
 		case KEY_INC:
-			return (KEY_INC_PORT->IDR & KEY_INC_PIN)? 1 : 0;
+//			return (KEY_INC_PORT->IDR & KEY_INC_PIN)? 1 : 0;
+		return (KEY_INC_PORT->IDR & KEY_INC_PIN)? 0 : 1;
 		
 		default:
 			return 0;
